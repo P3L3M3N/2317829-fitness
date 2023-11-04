@@ -2,6 +2,31 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 
+window.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('[data-gym-video-button]');
+  const container = document.querySelector('[data-gym-video-container]');
+
+  if (button && container) {
+    button.addEventListener('click', () => {
+      if (button.classList.contains('is-active')) {
+        return;
+      }
+
+      button.classList.add('is-active');
+      container.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+
+      button.classList.add('is-hidden');
+    });
+  }
+});
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

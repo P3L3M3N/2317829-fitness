@@ -1,22 +1,31 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  display: inline-block;
+  user-select: none;
+  touch-action: manipulation;
+  max-width: 290px;
+  padding: 2.25em;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  word-wrap: break-word;
+  color: $color-sapphire;
+  background-color: $color-transparent;
+  border: 2px solid $color-sapphire;
   cursor: pointer;
-
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--white {
+    color: $color-default-white;
+    border: 2px solid $color-default-white;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 

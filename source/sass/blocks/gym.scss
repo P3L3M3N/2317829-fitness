@@ -1,0 +1,275 @@
+.gym {
+  padding: 120px 0;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
+
+  .gym__container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1.6fr;
+    column-gap: 145px;
+    row-gap: 0;
+
+    @include vp-1365 {
+      grid-template-columns: 1fr;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      row-gap: 50px;
+    }
+  }
+
+  .gym__text-content {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    min-height: 190px;
+
+    @include vp-1365 {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+
+      p + p {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      padding: 0;
+      padding-left: 15px;
+      padding-right: 26px;
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 25px;
+
+      @include vp-1365 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      @include vp-767 {
+        text-align: left;
+        margin-bottom: 13px;
+      }
+    }
+
+    h3 {
+      display: block;
+      margin: 0;
+      margin-bottom: 40px;
+      padding: 0;
+      font-weight: 400;
+      font-size: 18px;
+
+      @include vp-1365 {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      @include vp-767 {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 8px;
+      padding: 0;
+      width: 100%;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+
+      @include vp-1365 {
+        max-width: 75%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      @include vp-767 {
+        text-align: left;
+        margin: 0;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .gym__image {
+    grid-column: 2/3;
+
+    @include vp-1365 {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center center;
+
+    @include vp-1365 {
+      height: 345px;
+    }
+
+    @include vp-767 {
+      height: 313px;
+      min-width: 320px;
+    }
+  }
+
+  .gym__video {
+    grid-row: 3/4;
+    position: relative;
+    background-color: $color-dark-cerulean;
+    margin-top: -80px;
+    margin-left: -550px;
+    width: 364px;
+    height: 228px;
+
+    @include vp-1365 {
+      margin-top: -80px;
+      margin-left: 0;
+      width: 265px;
+      height: 167px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+      margin-left: 0;
+      height: 167px;
+      min-width: 320px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      opacity: 0.5;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .gym__video-button {
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-51%, 49%);
+    background: $color-transparent;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid $rgba-torch-red-20;
+    z-index: 2;
+
+    @include vp-1365 {
+      width: 72px;
+      height: 72px;
+    }
+
+    @include vp-767 {
+      transform: translate(-50%, 49%);
+    }
+
+    &:hover,
+    &:focus {
+      border: 2px solid $color-sapphire;
+    }
+
+    &:active:not(.focus-visible) {
+      border: 2px solid $color-sapphire;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $red-to-blue;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      top: 51%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+
+      @include vp-1365 {
+        width: 52px;
+        height: 52px;
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      border: 7px solid $color-transparent;
+      border-left: 12px solid $color-default-white;
+      top: 50%;
+      left: 57%;
+      transform: translate(-50%, -50%);
+
+      @include vp-1365 {
+        border: 5px solid $color-transparent;
+        border-left: 9px solid $color-default-white;
+      }
+
+      @include vp-767 {
+        transform: translate(-54%, -50%);
+      }
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background: $color-default-white;
+      top: 50%;
+      left: 50%;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      border-left: 12px solid $color-sapphire;
+      top: 50%;
+      left: 56%;
+
+      @include vp-1365 {
+        border: 5px solid $color-transparent;
+        border-left: 9px solid $color-sapphire;
+        left: 57%;
+      }
+    }
+
+    &:active::before {
+      width: 58px;
+      height: 58px;
+      transition: width 0.3s, height 0.3s;
+      top: 50%;
+      left: 50%;
+
+      @include vp-1365 {
+        width: 41px;
+        height: 41px;
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+}
+
