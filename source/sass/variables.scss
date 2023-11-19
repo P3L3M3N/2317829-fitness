@@ -18,15 +18,18 @@ $color-crimson:                     #d10a42;
 $color-ghost-white:                 #f8f9fc;
 $color-black-russian:               #030a1a;
 $color-default-red:                 #ff121f;
+$coror-smalt:                       #00359f;
 
 // Opacity
 $rgba-torch-red-20:                 rgba(237, 2, 51, 0.2);
+$rgba-grey-30:                      rgba(120, 120, 120, 0.3);
 
 // Gradient
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $blue-to-red:                       linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 $red-to-blue:                       linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
 $crimson-to-cobalt:                 linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
+$crimson-to-smalt:                  linear-gradient(to right bottom, #d10a42, #00359f);
 
 // Typography
 // ---------------------------------

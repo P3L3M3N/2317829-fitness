@@ -2,7 +2,6 @@
   display: inline-block;
   user-select: none;
   touch-action: manipulation;
-  max-width: 290px;
   padding: 2.25em;
   font-size: 12px;
   font-weight: 700;
@@ -13,15 +12,21 @@
   text-transform: uppercase;
   white-space: normal;
   word-wrap: break-word;
-  color: $color-sapphire;
   background-color: $color-transparent;
+  color: $color-sapphire;
   border: 2px solid $color-sapphire;
   cursor: pointer;
   transition: opacity $trans-default;
 
-  &--white {
+  @include hover-focus {
     color: $color-default-white;
-    border: 2px solid $color-default-white;
+    background: $red-to-blue;
+    border-image-slice: 1;
+    border-image-source: $red-to-blue;
+  }
+
+  @include active {
+    color: rgba($color-default-white, 0.6);
   }
 
   &:disabled {
@@ -29,7 +34,18 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &--white {
+    color: $color-default-white;
+    border: 2px solid $color-default-white;
+
+    @include hover-focus {
+      border: $color-default-white;
+      background: $color-default-white;
+      color: #103aae;
+    }
+
+    @include active {
+      color: #102654;
+    }
   }
 }

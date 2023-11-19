@@ -2,16 +2,16 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Supergym – крупнейший фитнес центр за Уралом с современным оборудованием, зонами для Crossfit, кардио-тренировок и групповых занятий.">
   <title>Supergym Омск - Крупнейший фитнес-центр за Уралом</title>
   <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32" >
+  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png" sizes="180x180">
 
@@ -53,7 +53,7 @@
                 <li class="hero__services-item">Кардио-зона</li>
               </ul>
             </div>
-            <a class="btn btn--white hero__subscribe-button" href="#buy-subscription">
+            <a class="btn btn--white hero__subscribe-button" href="#subscription">
               Купить абонемент
             </a>
           </div>
@@ -79,15 +79,18 @@
           <div class="gym__text-content">
             <h2>Тренажерный зал</h2>
             <h3>Просторный зал площадью 900 кв/м<h3>
-            <p>
-              Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
-              и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
-            </p>
-            <p>
-              В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40
-              тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых
-              занятий.
-            </p>
+                <p>
+                  Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления
+                  тела
+                  и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех
+                  спортсменов.
+                </p>
+                <p>
+                  В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40
+                  тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов
+                  групповых
+                  занятий.
+                </p>
           </div>
           <div class="gym__image">
             <picture>
@@ -101,7 +104,7 @@
                 srcset="./img/gym/gym-img-mobile.webp 1x, ./img/gym/gym-img-mobile@2x.webp 2x">
               <source type="image/jpeg" media="(max-width: 767px)"
                 srcset="./img/gym/gym-img-mobile.jpg 1x, ./img/gym/gym-img-mobile@2x.jpg 2x">
-              <img src="./img/gym/gym-img-desktop.jpg" width="660" height="401" alt="Изображение тренажерного зала.">
+              <img src="./img/gym/gym-img-desktop.jpg" width="660" height="401" alt="Тренажерный зал Supergym.">
             </picture>
           </div>
           <div class="gym__video" data-gym-video-container>
@@ -117,15 +120,239 @@
               <source type="image/jpeg" media="(max-width: 767px)"
                 srcset="./img/gym/gym-preview-img-mobile.jpg 1x, ./img/gym/gym-preview-img-mobile@2x.jpg 2x">
               <img src="./img/gym/gym-preview-img-desktop.jpg" width="364" height="228"
-                srcset="./img/gym/gym-preview-img-desktop@2x.jpg 2x" alt="Видео тренажерного зала.">
+                srcset="./img/gym/gym-preview-img-desktop@2x.jpg 2x" alt="Заставка видеоролика о тренажерном зале Supergym.">
             </picture>
             <button class="gym__video-button" data-gym-video-button type="button" aria-label="Воспроизвести видео.">
             </button>
           </div>
-
         </div>
       </section>
 
+      <section class="subscription" id="subscription">
+        <div class="container subscription__container">
+          <h2 class="subscription__title">Абонементы</h2>
+          <ul class="subscription__period-list">
+            <li class="subscription__period-item">
+              <button class="subscription__period-button subscription__period-button--active" type="button" data-subscription-period>
+                1 месяц
+              </button>
+            </li>
+            <li class="subscription__period-item">
+              <button class="subscription__period-button" type="button" data-subscription-period>
+                6 месяцев
+              </button>
+            </li>
+            <li class="subscription__period-item">
+              <button class="subscription__period-button" type="button" data-subscription-period>
+                12 месяцев
+              </button>
+            </li>
+          </ul>
+          <ul class="subscription__card-list">
+            <li class="subscription__card-item subscription__card-item--trainer">
+              <h3 class="subscription__card-title">С тренером</h3>
+              <p class="subscription__card-text">12 занятий</p>
+              <div class="subscription__price-wrapper">
+                <span class="subscription__card-price" data-subscription-price>5000</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite.svg#rouble"></use>
+                </svg>
+                <span class="subscription__card-shadow" data-subscription-price-shadow>5000</span>
+              </div>
+              <a class="subscription__card-button btn" href="#">купить абонемент</a>
+            </li>
+            <li class="subscription__card-item subscription__card-item--only-day">
+              <h3 class="subscription__card-title">Дневной</h3>
+              <p class="subscription__card-text">с 8:00 до 17:00</p>
+              <div class="subscription__price-wrapper">
+                <span class="subscription__card-price" data-subscription-price>1700</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite.svg#rouble"></use>
+                </svg>
+                <span class="subscription__card-shadow" data-subscription-price-shadow>1700</span>
+              </div>
+              <a class="subscription__card-button btn" href="#">купить абонемент</a>
+            </li>
+            <li class="subscription__card-item subscription__card-item--full-day">
+              <h3 class="subscription__card-title">Полный день</h3>
+              <p class="subscription__card-text">с 8:00 до 22:00</p>
+              <div class="subscription__price-wrapper">
+                <span class="subscription__card-price" data-subscription-price>2700</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite.svg#rouble"></use>
+                </svg>
+                <span class="subscription__card-shadow"
+                  data-subscription-price-shadow>2700</span>
+              </div>
+              <a class="subscription__card-button btn" href="#">купить абонемент</a>
+            </li>
+          </ul>
+          <div class="subscription__image">
+            <picture>
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/subscription/weight-plates-img-tablet.webp 1x,
+              img/subscription/weight-plates-img-tablet@2x.webp 2x">
+              <source type="image/png" media="(max-width: 1365px)"
+                srcset="img/subscription/weight-plates-img-tablet.png 1x, img/subscription/weight-plates-img-tablet@2x.png 2x">
+              <source type="image/webp" srcset="img/subscription/weight-plates-img-desktop.webp 1x,
+              img/subscription/weight-plates-img-desktop@2x.webp 2x">
+              <img src="img/subscription/weight-plates-img-desktop.png" width="287" height="384"
+                srcset="img/subscription/weight-plates-img-desktop@2x.png 2x" alt="">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="games">
+        <div class="container games__container">
+          <h2 class="visually-hidden">Cоревнования</h2>
+
+          <section class="contest">
+            <div class="contest__description">
+              <div class="contest__details">
+                <h3 class="contest__title">Super Games</h3>
+                <div class="contest__schedule">
+                  <div class="contest__time-slot">
+                    <h4>Дата</h4>
+                    <div class="contest__date">
+                      <span class="contest__day">7</span>
+                      <div class="contest__month-year">
+                        <span>Марта</span>
+                        <span>2019</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contest__time-slot">
+                    <h4>Время</h4>
+                    <div class="contest__time">
+                      <span class="contest__hours">12:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="contest__details-text">Ежегодные соревнования по&nbsp;CrossFit</p>
+              <a class="contest__register-link btn btn--white" href="#">Заполнить заявку</a>
+            </div>
+            <div class="contest__image">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/games/games-img-mobile.webp 1x,
+                      img/games/games-img-mobile@2x.webp 2x">
+                <source type="image/jpeg" media="(max-width: 767px)" srcset="img/games/games-img-mobile.jpg 1x,
+                      img/games/games-img-mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/games/games-img-tablet.webp 1x,
+                      img/games/games-img-tablet@2x.webp 2x">
+                <source type="image/jpeg" media="(max-width: 1365px)"
+                  srcset="img/games/games-img-tablet.jpg 1x, img/games/games-img-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/games/games-img-desktop.webp 1x,
+                      img/games/games-img-desktop@2x.webp 2x">
+                <img src="img/games/games-img-desktop.jpg" width="660" height="200"
+                  srcset="img/games/games-img-desktop@2x.jpg 2x" alt="Спортсмен на соревнованиях Super Games.">
+              </picture>
+            </div>
+          </section>
+
+
+          <section class="jury">
+            <h3 class="jury__title">Жюри</h3>
+            <div class="jury__slider">
+              <div class="jury-swiper swiper" data-jury-swiper>
+                <div class="jury__swiper-wrapper swiper-wrapper">
+                  <div class="jury__swiper-slide swiper-slide">
+                    <div class="jury__card">
+                      <div class="jury__image">
+                        <picture>
+                          <source type="image/webp" srcset="img/games/jury-anna.webp 1x, img/games/jury-anna@2x.webp 2x">
+                          <img src="img/games/jury-anna.jpg" srcset="img/games/jury-anna@2x.jpg 2x" width="260"
+                            height="294" loading="lazy" alt="Член жюри - Александр Пашков.">
+                        </picture>
+                      </div>
+                      <h4 class="jury__name">Александр Пашков</h4>
+                      <div class="jury__list-wrapper">
+                        <h5 class="jury__list-title">CrossFit</h5>
+                        <ul class="jury__list">
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit </li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jury__swiper-slide swiper-slide">
+                    <div class="jury__card">
+                      <div class="jury__image">
+                        <picture>
+                          <source type="image/webp" srcset="img/games/jury-aleksey.webp 1x, img/games/jury-aleksey@2x.webp 2x">
+                          <img src="img/games/jury-aleksey.jpg" srcset="img/games/jury-aleksey@2x.jpg 2x" width="260"
+                            height="294" loading="lazy" alt="Член жюри - Александр Пашков.">
+                        </picture>
+                      </div>
+                      <h4 class="jury__name">Александр Пашков</h4>
+                      <div class="jury__list-wrapper">
+                        <h5 class="jury__list-title">CrossFit</h5>
+                        <ul class="jury__list">
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit </li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jury__swiper-slide swiper-slide">
+                    <div class="jury__card">
+                      <div class="jury__image">
+                        <picture>
+                          <source type="image/webp" srcset="img/games/jury-aleksandr.webp 1x, img/games/jury-aleksandr@2x.webp 2x">
+                          <img src="img/games/jury-aleksandr.jpg" srcset="img/games/jury-aleksandr@2x.jpg 2x" width="260"
+                            height="294" loading="lazy" alt="Член жюри - Александр Пашков.">
+                        </picture>
+                      </div>
+                      <h4 class="jury__name">Александр Пашков</h4>
+                      <div class="jury__list-wrapper">
+                        <h5 class="jury__list-title">CrossFit</h5>
+                        <ul class="jury__list">
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit </li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jury__swiper-slide swiper-slide">
+                    <div class="jury__card">
+                      <div class="jury__image">
+                        <picture>
+                          <source type="image/webp" srcset="img/games/jury-mariya.webp 1x, img/games/jury-mariya@2x.webp 2x">
+                          <img src="img/games/jury-mariya.jpg" srcset="img/games/jury-mariya@2x.jpg 2x" width="260"
+                            height="294" loading="lazy" alt="Член жюри - Александр Пашков.">
+                        </picture>
+                      </div>
+                      <h4 class="jury__name">Александр Пашков</h4>
+                      <div class="jury__list-wrapper">
+                        <h5 class="jury__list-title">CrossFit</h5>
+                        <ul class="jury__list">
+                          <li>Certified Level 3 Trainer</li>
+                          <li>Победитель чемпионата России по CrossFit </li>
+                          <li>Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="jury__slider-button jury__slider-button--prev" type="button" aria-label="Предыдущий слайд" data-jury-swiper-btn-prev>
+                <svg width="16" height="32">
+                  <use href="img/sprite.svg#jury-arrow"></use>
+                </svg>
+              </button>
+              <button class="jury__slider-button jury__slider-button--next"  type="button" aria-label="Следующий слайд" data-jury-swiper-btn-next>
+                <svg width="16" height="32">
+                  <use href="img/sprite.svg#jury-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+
+      </section>
 
     </main>
     <footer>
