@@ -160,6 +160,7 @@
     &::after {
       width: 70%;
     }
+
     @include vp-1365 {
       width: 100%;
     }

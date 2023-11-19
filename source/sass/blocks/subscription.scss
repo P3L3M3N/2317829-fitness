@@ -92,7 +92,7 @@
     min-height: 36px;
 
     @include hover-focus {
-      color:  $color-sapphire;
+      color: $color-sapphire;
     }
 
     &--active {
@@ -335,6 +335,7 @@
       color: rgba($color-default-white, 0.6);
     }
   }
+
   .subscription__image {
     position: absolute;
     right: 0;
