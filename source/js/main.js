@@ -4,7 +4,12 @@ import {Form} from './modules/form-validate/form';
 import {initJurySlider} from './modules/jury-slider';
 import {initGymVideo} from './modules/gym-video';
 import {selectSubscriptionPrices} from './modules/subsciption-prices';
+import {initAccordions} from './modules/init-accordion';
+import {initTabs} from './modules/init-tabs';
+import {initReviewSlider} from './modules/reviews-slider';
+
 // ---------------------------------
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -17,6 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   initGymVideo();
   selectSubscriptionPrices();
   initJurySlider();
+  initAccordions();
+  initTabs();
+  initReviewSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -25,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
   });
 });
 

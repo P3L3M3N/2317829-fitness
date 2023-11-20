@@ -1,0 +1,192 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  .accordion__element {
+    padding: 22px 0;
+    border-top: 1px solid rgba(28, 51, 116, 0.2);
+
+    @include vp-1365 {
+      padding: 25px 0;
+      padding-bottom: 24px;
+    }
+
+    @include vp-767 {
+      padding: 22px 0;
+      padding-bottom: 21px;
+    }
+  }
+
+  .accordion__element:last-child {
+    border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  }
+
+  .accordion__element.is-active {
+    padding-bottom: 28px;
+
+    @include vp-1365 {
+      padding-bottom: 24px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 21px;
+    }
+  }
+
+  .accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .accordion__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 42px;
+    padding: 0;
+    padding-right: 80px;
+    font-family: $ff-roboto-condensed;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+
+    color: $color-sapphire;
+    background-color: $color-transparent;
+    border: none;
+    cursor: pointer;
+
+    @include vp-1365 {
+      min-height: 40px;
+      padding-right: 100px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      min-height: 40px;
+      padding-right: 40px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include focus {
+      outline: none;
+    }
+  }
+
+  .accordion__button span {
+    max-width: 700px;
+    word-wrap: break-word;
+
+    @include vp-1365 {
+      max-width: 600px;
+    }
+
+    @include vp-767 {
+      max-width: 240px;
+    }
+  }
+
+  .accordion__element.is-active .accordion__button > span {
+    @include vp-767 {
+      max-width: 200px;
+    }
+  }
+
+  .accordion__button.focus-visible:focus .accordion__svg-wrapper {
+    color: $color-default-white;
+    background-color: $color-sapphire;
+    border-color: transparent;
+  }
+
+  .accordion__svg-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: $color-sapphire;
+    border: 1px solid $color-sapphire;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    &--open {
+      display: none;
+    }
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .accordion__svg-wrapper svg {
+    @include vp-767 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .accordion__element.is-active .accordion__button > .accordion__svg-wrapper {
+    &--open {
+      display: flex;
+      color: $color-default-white;
+      background-color: $color-sapphire;
+      border-color: transparent;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+
+  .accordion__wrapper {
+    margin-top: 4px;
+
+    @include vp-1365 {
+      margin-top: 2px;
+    }
+
+    @include vp-767 {
+      margin-top: 20px;
+    }
+  }
+
+  .accordion__wrapper p {
+    max-width: 1000px;
+    margin: 0;
+    padding-right: 200px;
+    color: $color-sapphire;
+    font-family: $ff-roboto-condensed;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    word-wrap: break-word;
+
+    @include vp-1365 {
+      max-width: 700px;
+      padding-right: 120px;
+    }
+
+    @include vp-767 {
+      max-width: 320px;
+      padding-right: 15px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @media (hover: hover) {
+    .accordion__button:hover:not(.focus-visible) .accordion__svg-wrapper {
+      color: $color-default-white;
+      background-color: $color-sapphire;
+      border-color: transparent;
+    }
+  }
+}

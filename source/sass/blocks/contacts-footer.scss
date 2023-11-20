@@ -1,0 +1,145 @@
+.contacts-footer {
+  background-color: $color-default-white;
+  border-top: 1px solid #74819c;
+
+  @include vp-1365 {
+    border-top: unset;
+  }
+}
+
+.contacts-footer__container {
+  height: 100%;
+  min-height: 335px;
+  padding: 60px 120px;
+  padding-right: 40px;
+  padding-bottom: 58px;
+  color: $color-sapphire;
+  font-family: $ff-roboto-condensed;
+
+  @include vp-1365 {
+    padding: 100px 133px;
+    padding-bottom: 98px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px;
+    padding-top: 67px;
+    padding-bottom: 42px;
+  }
+}
+
+.contacts-footer__title {
+  max-width: 510px;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $ff-alumni-sans;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  word-wrap: break-word;
+
+  @include vp-1365 {
+    margin-bottom: 35px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 37px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.contacts-footer__address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  font-style: normal;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.contacts-footer__list {
+  min-width: 250px;
+  margin: 0;
+}
+
+.contacts-footer__list:first-child {
+  padding-right: 50px;
+  border-right: 1px solid #74819c;
+
+  @include vp-1365 {
+    padding-right: 60px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+    border-right: unset;
+  }
+}
+
+.contacts-footer__list:last-child {
+  padding-left: 50px;
+
+  @include vp-1365 {
+    padding-left: 60px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.contacts-footer__term {
+  max-width: 180px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+
+  @include vp-1365 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.contacts-footer__description {
+  max-width: 180px;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  word-wrap: break-word;
+
+  @include vp-767 {
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.contacts-footer__description:first-of-type {
+  margin-bottom: 15px;
+
+  @include vp-1365 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}

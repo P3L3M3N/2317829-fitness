@@ -1,0 +1,85 @@
+.reviews-swiper-nav__button {
+  position: absolute;
+  bottom: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  color: $color-sapphire;
+  border-radius: 56px;
+  z-index: 10;
+  border: none;
+  outline: none;
+  background: $color-transparent;
+  cursor: pointer;
+
+  &--prev {
+    left: 0;
+    transform: translateX(330px) translateY(50%);
+  }
+
+  &--next {
+    right: 0;
+    transform: translateX(-330px) translateY(50%) scale(-1);
+  }
+
+  @include vp-1365 {
+    &--prev {
+      left: 0;
+      transform: translateY(50%) translateX(50%);
+    }
+
+    &--next {
+      right: 0;
+      transform: translateY(50%) translateX(-50%) scale(-1);
+    }
+  }
+
+  @include vp-767 {
+    width: 36px;
+    height: 36px;
+
+    &--prev {
+      left: 0;
+      transform: translateY(50%) translateX(10%);
+    }
+
+    &--next {
+      right: 0;
+      transform: translateY(50%) translateX(-10%) scale(-1);
+    }
+  }
+
+  @include hover-focus {
+    outline: none;
+    border: 1px solid $color-sapphire;
+  }
+
+  @include active {
+    color: $color-default-white;
+    background-color: $color-sapphire;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    opacity: 0.3;
+    cursor: auto;
+
+    @include hover-focus {
+      border: unset;
+    }
+
+    @include active {
+      color: $color-sapphire;
+      background-color: unset;
+    }
+  }
+}
+
+.reviews-swiper-nav__button svg {
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}

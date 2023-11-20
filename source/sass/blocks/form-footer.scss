@@ -1,0 +1,219 @@
+.form-footer {
+  background-color: $color-sapphire;
+}
+
+.form-footer__container {
+  height: 100%;
+  min-height: 335px;
+  padding: 60px 103px;
+  padding-right: 40px;
+  padding-bottom: 58px;
+  color: $color-default-white;
+
+  @include vp-1365 {
+    display: block;
+    padding: 100px 133px;
+    padding-top: 102px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
+}
+
+.form-footer__title {
+  max-width: 410px;
+  margin: 0;
+  margin-bottom: 26px;
+  font-family: $ff-alumni-sans;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  word-wrap: break-word;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.form-footer__form {
+  @include vp-1365 {
+    width: 100%;
+  }
+}
+
+.form-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 410px;
+
+  @include vp-1365 {
+    gap: 56px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 40px;
+  }
+}
+
+.form-footer__input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 0;
+  padding-bottom: 35px;
+  font-family: $ff-roboto-condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-1365 {
+    width: 100%;
+    padding-bottom: 28px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.form-footer__input label > input::placeholder {
+  color: $color-default-white;
+}
+
+.form-footer__input label > input {
+  max-width: 190px;
+  min-height: unset;
+  height: 36px;
+  margin-left: 0;
+  padding: 10px 4px;
+  color: $color-default-white;
+  background-color: transparent;
+  border-radius: unset;
+  border: 1px solid transparent;
+  border-bottom-color: #74819c;
+  transition: none;
+
+  &:placeholder-shown {
+    padding-left: 0;
+  }
+
+  @include hover {
+    padding-left: 4px;
+    border: 1px solid transparent;
+    border-bottom-color: $color-default-white;
+  }
+
+  @include focus {
+    padding-left: 4px;
+    border: 1px solid $color-default-white;
+  }
+
+  @include active {
+    padding-left: 4px;
+    border: 1px solid $color-default-white;
+  }
+
+  &:focus-visible {
+    padding-left: 4px;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    border: 1px solid transparent;
+    border-bottom-color: rgba(116, 129, 156, 0.3);
+  }
+
+  @include vp-1365 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    height: 26px;
+    padding: 5px 4px;
+    min-height: unset;
+  }
+}
+
+.form-footer__input.is-invalid label > input {
+  border: 1px solid transparent;
+  border-bottom-color: $color-torch-red;
+
+  @include hover-focus {
+    border: 1px solid transparent;
+    border-bottom-color: $color-torch-red;
+  }
+}
+
+.form-footer__input .input-message {
+  position: static;
+  max-width: max-content;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.form-footer__submit {
+  justify-content: center;
+  align-items: center;
+  width: 410px;
+  min-height: 66px;
+  color: $color-default-white;
+  background-color: transparent;
+  border: 2px solid $color-default-white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @include hover-focus {
+    outline: none;
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  @include active {
+    color: $color-sapphire;
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include vp-1365 {
+    width: 100%;
+    min-height: 54px;
+  }
+
+  @include vp-767 {
+    min-height: 56px;
+  }
+}
+
+.form-footer__submit span {
+  max-width: 120px;
+  word-wrap: break-word;
+}
